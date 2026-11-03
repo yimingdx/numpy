@@ -486,7 +486,7 @@ def apply_over_axes(func, a, axes):
 
     """
     val = asarray(a)
-    N = a.ndim
+    N = val.ndim
     if array(axes).ndim == 0:
         axes = (axes,)
     for axis in axes:

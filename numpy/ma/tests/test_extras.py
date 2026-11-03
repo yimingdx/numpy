@@ -914,6 +914,10 @@ class TestApplyOverAxes:
         ctrl = np.array([[[28], [44], [60]]])
         assert_equal(test, ctrl)
 
+    def test_array_like(self):
+        actual = apply_over_axes(np.sum, [[1, 2], [3, 4]], 0)
+        assert_equal(actual, [[4, 6]])
+
 
 class TestMedian:
     def test_pytype(self):

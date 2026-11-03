@@ -305,6 +305,10 @@ class TestApplyOverAxes:
         aoa_a = apply_over_axes(np.sum, a, [0, 2])
         assert_array_equal(aoa_a, np.array([[[60], [92], [124]]]))
 
+    def test_array_like(self):
+        actual = apply_over_axes(np.sum, [[1, 2], [3, 4]], 0)
+        assert_array_equal(actual, [[4, 6]])
+
 
 class TestExpandDims:
     def test_functionality(self):
